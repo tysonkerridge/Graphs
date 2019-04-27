@@ -231,7 +231,7 @@ public extension UIColor {
     }
 }
 
-public extension UIEdgeInsets {
+extension UIEdgeInsets {
     
 //    public init(all: CGFloat) {
 //        self.left = all

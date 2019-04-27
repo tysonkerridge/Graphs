@@ -35,7 +35,7 @@ open class Graph<T: Hashable, U: NumericType> {
     }
 }
 
-public extension Graph {
+extension Graph {
     
     public convenience init<S: GraphData>(type: GraphType, data: [S], min minOrNil: U? = nil, max maxOrNil: U? = nil, textDisplayHandler: GraphTextDisplayHandler? = nil) where S.GraphDataKey == T, S.GraphDataValue == U {
         
@@ -137,7 +137,7 @@ public extension Graph {
     }
 }
 
-public extension Graph {
+extension Graph {
     
     public convenience init(type: GraphType, dictionary: [T: U], min minOrNil: U? = nil, max maxOrNil: U? = nil, textDisplayHandler: GraphTextDisplayHandler? = nil) {
         
@@ -191,7 +191,7 @@ public extension Graph {
     }
 }
 
-public extension Graph {
+extension Graph {
     
     public func view(_ frame: CGRect) -> GraphView<T, U> {
         return GraphView(frame: frame, graph: self)
