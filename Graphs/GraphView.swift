@@ -28,6 +28,14 @@ open class GraphView<T: Hashable, U: NumericType>: UIView {
         self.reloadData()
     }
     
+    public override init(frame: CGRect) {
+        self.graph = nil
+        super.init(frame: frame)
+        
+        self.backgroundColor = UIColor.clear
+        self.reloadData()
+    }
+    
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.backgroundColor = UIColor.clear
